@@ -15,7 +15,7 @@ RUN cd /usr/local                                                        \
 ENV PATH "/usr/local/node/bin:$PATH"
 ENV PORT "3333"
 ENV HOST "0.0.0.0"
-ENV RAILS_ENV "development" #change to production at the time of Production deployment
+ENV RAILS_ENV "development"
 
 RUN npm i -g yarn
 COPY . /usr/src/app
