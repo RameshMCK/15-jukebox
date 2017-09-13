@@ -9,6 +9,6 @@ until psql -h pg -U postgres -c "\l"; do
 done
 
 >&2 echo "Postgres is up - executing command(s)"
-rails db:create
-rails db:migrate
-exec $cmd
+ rails db:create
+ rails db:migrate
+ exec $cmd
