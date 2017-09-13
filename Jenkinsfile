@@ -41,7 +41,7 @@ pipeline {
     stage('login and push') {
       steps {
         sh '''
-          docker login -u chyld -p $DOCKER_PASSWORD
+          docker login -u rameshmck -p $DOCKER_PASSWORD
           docker push rameshmck/jukebox:$BUILD_NUMBER
 '''
       }
