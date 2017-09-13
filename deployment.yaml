@@ -28,13 +28,14 @@ spec:
       - name: web
         image: rameshmck/jukebox:$BUILD_NUMBER
         env:
-            - name: RAILS_ENV
-              value: production
-            - PGPASSWORD
-              valueFrom:
-                secretKeyRef:
-                    name: topsecret
-                    key: pgpassword
+                - name: RAILS_ENV
+                  value: production
+                - name: PGPASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: topsecret
+                      key: pgpassword
+
         ports:
         - containerPort: 3333
 
